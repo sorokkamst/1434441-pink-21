@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Иван Ломов](https://up.htmlacademy.ru/adaptive/21/user/1434441).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Грачев](https://up.htmlacademy.ru/htmlcss/29/user/252055).
 
 ---
 
