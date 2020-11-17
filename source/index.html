@@ -1,12 +1,193 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
 
-  </body>
+<body class="page__body">
+  <header class="page-header">
+    <a href="#" class="logo">
+      <img src="#" width="#" height="#" alt="Логотип Pink">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a>Главная</a></li>
+          <li class="main-nav__item"><a href="#">Фотографии</a></li>
+          <li class="main-nav__item"><a href="#">Конкурс</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">Pink — приложение для обработки и публикации фотографий</h1>
+    <section class="download">
+      <div class="download__wrapper">
+        <h2 class="visually-hidden">Ссылки на скачивание</h2>
+        <a href="https://www.apple.com/ru/app-store/" class="download__button">
+          Скачать приложение
+        </a>
+        <ul class="download__list">
+          <li class="download__item download__link--appstore"><a href="https://www.apple.com/ru/app-store/">AppStore</a>
+          </li>
+          <li class="download__item download__link--googleplay"><a href="https://play.google.com/store">Google Play</a>
+          </li>
+          <li class="download__item download__link--microsoft-store"><a
+              href="https://www.microsoft.com/ru-ru/store/apps/windows">Microsoft Store</a>
+          </li>
+        </ul>
+        <p class="download__description">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        </p>
+      </div>
+    </section>
+    <section class="features">
+      <h2 class="visually-hidden">Возможности приложения</h2>
+      <div class="features__wrapper">
+        <header class="features__header">
+          <p class="features__intro">Устали от серости мегаполиса?</p>
+          <p class="features__intro">Нам есть, что вам предложить!</p>
+        </header>
+        <dl class="features__list">
+          <div class="features__item">
+            <dt class="features__title">Поднимает настроение</dt>
+            <dd class="features__descrition">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</dd>
+          </div>
+          <div class="features__item">
+            <dt class="features__title">Меняет мир вокруг</dt>
+            <dd class="features__descrition">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</dd>
+          </div>
+          <div class="features__item">
+            <dt class="features__title">Заводит новых друзей</dt>
+            <dd class="features__descrition">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</dd>
+          </div>
+        </dl>
+        <img class="features__image" src="#" alt="Демонстрация возможностей приложения">
+      </div>
+    </section>
+    <section class="reviews-slider">
+      <h2 class="visually-hidden">Отзывы</h2>
+      <div class="reviews-slider__wrapper reviews-slider__wrapper--current">
+        <blockquote class="reviews-slider__quote">
+          <p class="reviews-slider__quote-text">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </p>
+        </blockquote>
+        <p class="reviews-slider__author">
+          Николай Петров
+        </p>
+        <ul class="reviews-slider__controls">
+          <li class="reviews-slider__control reviews-slider__control--active">1</li>
+          <li class="reviews-slider__control">2</li>
+          <li class="reviews-slider__control">3</li>
+        </ul>
+      </div>
+    </section>
+    <section class="price">
+      <h2 class="visually-hidden">Стоимость приложения</h2>
+      <div class="price__wrapper">
+        <table class="price__table">
+          <thead>
+            <tr>
+              <th class="price__table-head"></th>
+              <th class="price__table-head">
+                <span class="price__name">База</span>
+                <span class="price__price">1,99 USD</span>
+              </th>
+              <th class="price__table-head">
+                <span class="price__name">Стандарт</span>
+                <span class="price__price">3,99 USD</span>
+              </th>
+              <th class="price__table-head">
+                <span class="price__name">Анлим</span>
+                <span class="price__price">9,99 USD</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="price__table-cell">Розовый фильтр</td>
+              <td class="price__table-cell"></td>
+              <td class="price__table-cell"></td>
+              <td class="price__table-cell"></td>
+            </tr>
+            <tr>
+              <td class="price__table-cell">Смайлики</td>
+              <td class="price__table-cell"></td>
+              <td class="price__table-cell"></td>
+              <td class="price__table-cell"></td>
+            </tr>
+            <tr>
+              <td class="price__table-cell">Комментарии</td>
+              <td class="price__table-cell"></td>
+              <td class="price__table-cell"></td>
+              <td class="price__table-cell"></td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="price__controls">
+          <li class="price__control">1</li>
+          <li class="price__control price__control--active">2</li>
+          <li class="price__control">3</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="footer__wrapper">
+        <p class="contacts__title">
+          Остались вопросы? Свяжитесь с нами!
+        </p>
+        <dl class="contacts__list">
+          <div class="contacts__item">
+            <dt class="contacts__list-term">
+              Звоните
+            </dt>
+            <dd class="contacts__list-definition">
+              <a href="tel:+78125556666" class="contacts__list-link">+7 (812) 555-66-66</a>
+            </dd>
+          </div>
+          <div class="contacts__item">
+            <dt class="contacts__list-term">
+              Пишите
+            </dt>
+            <dd class="contacts__list-definition">
+              <a href="mailto:mail@htmlacademy.ru" class="contacts__list-link">mail@htmlacademy.ru</a>
+            </dd>
+          </div>
+          <div class="contacts__item">
+            <dt class="contacts__list-term">
+              Приезжайте в гости
+            </dt>
+            <dd class="contacts__list-definition">
+              <a class="contacts__list-link">ул. Большая Конюшенная, 19/8</a>
+            </dd>
+          </div>
+        </dl>
+    </section>
+    <div class="footer__logo">
+      <img src="#" alt="Логотип Pink" width="#" height="#">
+    </div>
+    <section class="social">
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <ul class="social__list">
+        <li class="social__item">twitter</li>
+        <li class="social__item">facebook</li>
+        <li class="social__item">youtube</li>
+      </ul>
+    </section>
+    <div class="footer__developer">
+      <span class="footer__developer-text">Разработано</span>
+      <img class="footer__developer-logo" src="#" alt="htmlacademy" width="#" height="#">
+    </div>
+    </div>
+  </footer>
+</body>
+
 </html>
