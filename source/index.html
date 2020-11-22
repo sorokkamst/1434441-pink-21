@@ -16,8 +16,8 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item"><a>Главная</a></li>
-          <li class="main-nav__item"><a href="#">Фотографии</a></li>
-          <li class="main-nav__item"><a href="#">Конкурс</a></li>
+          <li class="main-nav__item"><a href="catalog.html">Фотографии</a></li>
+          <li class="main-nav__item"><a href="form.hmtl">Конкурс</a></li>
           <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a></li>
         </ul>
       </div>
@@ -32,11 +32,11 @@
           Скачать приложение
         </a>
         <ul class="download__list">
-          <li class="download__item download__link--appstore"><a href="https://www.apple.com/ru/app-store/">AppStore</a>
+          <li class="download__item download__item--appstore"><a href="https://www.apple.com/ru/app-store/">AppStore</a>
           </li>
-          <li class="download__item download__link--googleplay"><a href="https://play.google.com/store">Google Play</a>
+          <li class="download__item download__item--googleplay"><a href="https://play.google.com/store">Google Play</a>
           </li>
-          <li class="download__item download__link--microsoft-store"><a
+          <li class="download__item download__item--microsoft-store"><a
               href="https://www.microsoft.com/ru-ru/store/apps/windows">Microsoft Store</a>
           </li>
         </ul>
@@ -52,44 +52,59 @@
           <p class="features__intro">Устали от серости мегаполиса?</p>
           <p class="features__intro">Нам есть, что вам предложить!</p>
         </header>
-        <dl class="features__list">
-          <div class="features__item">
-            <dt class="features__title">Поднимает настроение</dt>
-            <dd class="features__descrition">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</dd>
-          </div>
-          <div class="features__item">
-            <dt class="features__title">Меняет мир вокруг</dt>
-            <dd class="features__descrition">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</dd>
-          </div>
-          <div class="features__item">
-            <dt class="features__title">Заводит новых друзей</dt>
-            <dd class="features__descrition">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</dd>
-          </div>
-        </dl>
-        <img class="features__image" src="#" alt="Демонстрация возможностей приложения">
+        <ul class="features__list">
+          <li class="features__item features__item--mood">
+            <h3 class="features__title">Поднимает настроение</h3>
+            <p class="features__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
+              несколько кликов!</p>
+          </li>
+          <li class="features__item features__item--world">
+            <h3 class="features__title">Меняет мир вокруг</h3>
+            <p class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
+              усилить эффект</p>
+          </li>
+          <li class="features__item features__item--friends">
+            <h3 class="features__title">Заводит новых друзей</h3>
+            <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите
+              новых</p>
+          </li>
+        </ul>
       </div>
     </section>
-    <section class="reviews-slider">
-      <h2 class="visually-hidden">Отзывы</h2>
-      <div class="reviews-slider__wrapper reviews-slider__wrapper--current">
-        <blockquote class="reviews-slider__quote">
-          <p class="reviews-slider__quote-text">
-            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-          </p>
-        </blockquote>
-        <p class="reviews-slider__author">
-          Николай Петров
+    <section class="research">
+      <div class="research__wrapper">
+      <h2 class="visually-hidden">Результат от пользования приложением</h2>
+        <h3 class="research__title">Эффект на 24 часа</h3>
+        <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        <a href="#" class="research__link">Узнать больше об исследовании</a>
+    </div>
+    </section>
+    <section class="reviews">
+      <div class="reviews__wrapper slider">
+        <h2 class="visually-hidden">Отзывы о нас</h2>
+        <div class="reviews__list slider__list">
+          <blockquote class="reviews__item slider__item">
+            <div class="reviews__author-info">
+              <cite class="reviews__author-name">Николай Петров</cite>
+              <p class="reviews__author-info">25 лет, водитель трамвая</p>
+              <p class="reviews__author-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
+                привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной
+                фотографии!»</p>
+            </div>
+          </blockquote>
+        </div>
+        <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+        <button class="reviews__next" type="button">Следующий отзыв</button>
+        <p class="reviews__toggles slider__toggles">
+          <button class="reviews__toggle" type="button">1</button>
+          <button class="reviews__toggle reviews__toggle--active" type="button">2</button>
+          <button class="reviews__toggle" type="button">3</button>
         </p>
-        <ul class="reviews-slider__controls">
-          <li class="reviews-slider__control reviews-slider__control--active">1</li>
-          <li class="reviews-slider__control">2</li>
-          <li class="reviews-slider__control">3</li>
-        </ul>
       </div>
     </section>
     <section class="price">
       <h2 class="visually-hidden">Стоимость приложения</h2>
-      <div class="price__wrapper">
+      <div class="price__wrapper slider">
         <table class="price__table">
           <thead>
             <tr>
@@ -129,18 +144,16 @@
             </tr>
           </tbody>
         </table>
-        <ul class="price__controls">
-          <li class="price__control">1</li>
-          <li class="price__control price__control--active">2</li>
-          <li class="price__control">3</li>
-        </ul>
+        <p class="price__toggles slider__toggles">
+          <button class="price__toggle" type="button">1</button>
+          <button class="price__toggle price__toggle--active" type="button">2</button>
+          <button class="price__toggle" type="button">3</button>
+        </p>
       </div>
     </section>
-  </main>
-  <footer class="page-footer">
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="footer__wrapper">
+      <div class="contacts__wrapper">
         <p class="contacts__title">
           Остались вопросы? Свяжитесь с нами!
         </p>
@@ -171,21 +184,29 @@
           </div>
         </dl>
       </div>
+      <div class="contacts__map">
+      </div>
     </section>
-    <div class="footer__logo">
-      <img src="#" alt="Логотип Pink" width="1" height="1">
-    </div>
-    <section class="social">
-      <h2 class="visually-hidden">Социальные сети</h2>
-      <ul class="social__list">
-        <li class="social__item">twitter</li>
-        <li class="social__item">facebook</li>
-        <li class="social__item">youtube</li>
-      </ul>
-    </section>
-    <div class="footer__developer">
-      <span class="footer__developer-text">Разработано</span>
-      <img class="footer__developer-logo" src="#" alt="htmlacademy" width="1" height="1">
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__logo">
+        <img src="#" alt="Логотип Pink" width="1" height="1">
+      </div>
+      <section class="page-footer__social social">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="social__list">
+          <li class="social__item"><a href="#" class="social__link social__link--twitter">Мы в Твиттере</a></li>
+          <li class="social__item"><a href="#" class="social__link social__link--facebook">Мы в Фейсбуке</a></li>
+          <li class="social__item"><a href="#" class="social__link social__link--youtube">Мы в Ютубе</a></li>
+        </ul>
+      </section>
+      <div class="page-footer__developer">
+        <span class="page-footer__developer-text">Разработано</span>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__developer-link">
+        <img class="page-footer__developer-logo" src="#" alt="htmlacademy" width="1" height="1">
+      </a>
+      </div>
     </div>
   </footer>
 </body>
