@@ -6,20 +6,46 @@
   background-color: @dark-light-blue;
 }
 
+.price__table-head {
+  height: 94px;
+  padding: 0;
+}
+
 .price__name {
+  display: block;
   .font(16px;700;30px);
+  .size(276px;12px);
   color: @white;
   text-transform: uppercase;
 }
 
 .price__price {
+  display: block;
   .font(18px;300;30px);
+  .size(276px;13px);
   color: @white;
   text-transform: uppercase;
 }
 
 .price__table-cell {
   .font(14px;400;30px);
+  width: 276px;
   color: @dark-light-blue;
   text-transform: uppercase;
 }
+
+.price__table-head:first-child {
+display: none;
+}
+
+.price__wrapper {
+  overflow: hidden;
+}
+
+.price__table {
+  width: 834px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
