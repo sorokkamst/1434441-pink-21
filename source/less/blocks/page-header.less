@@ -20,8 +20,11 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-header {
+  .page-header .container {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     min-height: 110px;
   }
 
