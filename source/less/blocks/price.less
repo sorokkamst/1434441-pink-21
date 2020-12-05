@@ -7,7 +7,7 @@
 }
 
 .price__table-head {
-  height: 94px;
+  width: 276px;
   padding: 0;
 }
 
@@ -46,4 +46,25 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  width: 834px;
+}
+
+@media (min-width: @tablet-width) {
+  .price__table {
+    width: 620px;
+  }
+
+  .price__table-head:first-child {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price__table {
+    width: 940px;
+  }
+
+  .price__table-head:first-child {
+    display: block;
+  }
 }
