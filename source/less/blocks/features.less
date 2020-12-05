@@ -1,5 +1,10 @@
 .features {
   background-color: @grey-light;
+  min-height: 999px;
+}
+
+.features__header {
+  background-color: @white;
 }
 
 .features__intro {
@@ -39,6 +44,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .features {
+    min-height: 853px;
+  }
+
   .features__list {
     display: flex;
     flex-direction: column;
@@ -60,6 +69,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .features {
+    min-height: 856px;
+  }
+
   .features__list {
     display: flex;
     flex-direction: row;
