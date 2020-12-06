@@ -5,13 +5,28 @@
 }
 
 .form__item-input {
-  .font(18px;400;30px);
-  color: @dark-light-blue;
+  padding: 0;
 }
 
+.form__fieldset-wrapper:not(:first-child) {
+  padding-top: 47px;
+}
+
+.page-main__description-add {
+  display: none;
+}
+
+.page-main__form .form__fieldset-wrapper:nth-child(2),
+.page-main__form .form__fieldset-wrapper:nth-child(4) {
+  background-color: @grey-light;
+}
 
 .form__item-input::placeholder {
   color: @dark-light-blue;
+}
+
+.page-main__headline .page-main__description:last-child {
+  display: none;
 }
 
 .form__fieldset {
@@ -20,7 +35,8 @@
   padding: 0;
 }
 
-.form__fieldset--personal-data .form__item-label {
+.form__fieldset--personal-data .form__item-label,
+.form__fieldset--comments .form__item-label {
   .font(14px;400;30px);
   color: @pink;
   text-transform: uppercase;
@@ -28,18 +44,17 @@
 
 .form__legend {
   .font(14px;400;18px);
+  padding: 0;
   color: @pink;
   text-transform: uppercase;
-}
-
-.form__item-label {
-  .font(18px;400;30px);
-  color: @dark-light-blue;
+  text-align: center;
 }
 
 .form__textarea {
   .font(18px;400;30px);
   font-family: "Open Sans", "Arial", sans-serif;
+  padding: 0;
+  width: 280px;
 }
 
 .form__textarea::placeholder {
@@ -64,4 +79,185 @@
 
 .form__addition::first-letter {
   color: @pink;
+}
+
+.form__fieldset--personal-data .form__item,
+.form__fieldset--comments .form__item,
+.form__fieldset--comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__fieldset--personal-data .form__item-input,
+.form__fieldset--comments .form__item-input,
+.form__fieldset--comment .form__textarea {
+  .font(18px;400;30px);
+  color: @dark-light-blue;
+  order: 2;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-main__description-add {
+    display: block;
+  }
+
+  .page-main__description {
+    .font(18px;400;30px);
+    width: 490px;
+  }
+
+  .form .form__fieldset-wrapper:nth-child(1) {
+    order: 1;
+  }
+
+  .form__fieldset--personal-data .form__item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form__fieldset--personal-data .form__item-label {
+    margin-right: 20px;
+  }
+
+  .form__fieldset--personal-data .form__item-input {
+    width: 100%;
+  }
+
+  .form .form__fieldset-wrapper:nth-child(2) {
+    background-color: transparent;
+    order: 4;
+  }
+
+  .form .form__fieldset-wrapper:nth-child(3) {
+    order: 3;
+  }
+
+  .form__fieldset--comments {
+    border: 2px solid @grey;
+  }
+
+  .form .form__fieldset-wrapper:nth-child(4) {
+    background-color: transparent;
+    order: 2;
+  }
+
+  .form__fieldset--advantages {
+    border: 2px solid @grey;
+  }
+
+  .form__fieldset--system {
+    border: 2px solid @grey;
+  }
+
+  .form .form__fieldset-wrapper:nth-child(5) {
+    order: 5;
+  }
+
+  .form__fieldset--comments .form__item-label {
+    order: 2;
+  }
+
+  .form__sent {
+    display: flex;
+    justify-content: space-between;
+    order: 6;
+  }
+
+  .form__textarea {
+    width: 496px;
+    margin-left: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .page-main__description {
+    display: inline;
+  }
+
+  .form .form__fieldset-wrapper:first-child {
+    width: 433px;
+  }
+
+  .form .form__fieldset-wrapper:nth-child(4) {
+    background-color: transparent;
+    width: 433px;
+    padding-top: 0;
+  }
+
+  // Контактная информация на desktop
+
+  .form .form__fieldset-wrapper:nth-child(3) {
+    width: 100%;
+  }
+
+  .form__fieldset--comments .form__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .form__fieldset--comments .form__item-label {
+    order: 2;
+  }
+
+  // Достижения на desktop
+  .form .form__fieldset-wrapper:nth-child(2) {
+    background-color: transparent;
+    width: 100%;
+  }
+
+  .form__fieldset--advantages .form__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "a d v"
+      "n t g";
+  }
+
+  .form__fieldset--advantages .form__item:nth-child(1) {
+    grid-area: a;
+  }
+
+  .form__fieldset--advantages .form__item:nth-child(2) {
+    grid-area: n;
+  }
+
+  .form__fieldset--advantages .form__item:nth-child(3) {
+    grid-area: d;
+  }
+
+  .form__fieldset--advantages .form__item:nth-child(4) {
+    grid-area: t;
+  }
+
+  .form__fieldset--advantages .form__item:nth-child(5) {
+    grid-area: v;
+  }
+
+  .form__fieldset--advantages .form__item:nth-child(6) {
+    grid-area: g;
+  }
+
+  .form__fieldset--comments .form__item {
+    min-width: 257px;
+  }
+
+  .form .form__fieldset-wrapper:nth-child(5) {
+    background-color: transparent;
+    width: 100%;
+  }
+
+  .form__sent {
+    width: 100%;
+  }
 }
