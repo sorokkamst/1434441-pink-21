@@ -4,17 +4,29 @@
   margin: 0;
 }
 
-.page-main__wrapper {
-  background-image: url("../img/first-screen-image.png");
-  background-repeat: no-repeat;
-  min-height: 396px;
-}
-
 .page-main__slogan {
   .font(24px;300;29px);
-  min-height: 47px;
+  padding-top: 88px;
   color: @white;
   margin: 0;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .font(40px;300;48px);
+    display: inline-block;
+    width: 220px;
+    padding-left: 40px;
+    padding-top: 203px;
+    margin-bottom: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    .font(50px;300;68px);
+    padding-left: 31px;
+    padding-top: 168px;
+    margin-bottom: 9px;
+  }
 }
 
 .page-main__description {
