@@ -1,40 +1,109 @@
-.page-footer__developer-text {
-  .font(14px;400;18px);
-  color: @dark-light-blue;
+.page-footer {
+  height: 284px;
+
+  @media (min-width: @tablet-width) {
+    height: 127px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 197px;
+  }
 }
 
-.page-footer__wrapper {
-  display: flex;
-  flex-direction: column;
+.page-footer__logo {
+  margin-top: 39px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 35px;
+    margin-left: 0px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 70px;
+    margin-left: 2px;
+  }
 }
 
 .social__list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   margin: 0;
+  margin-top: 36px;
+  margin-left: 10px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    margin-left: -3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    margin-left: 12px;
+  }
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .size(48px; 48px);
+  border-radius: 50%;
+  border: 3px solid fade(@dark-light-blue, 10%);
+  margin-right: 6px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 7px;
+    margin-right: 9px;
+  }
+}
+
+.page-footer__developer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 35px;
+
+    & svg {
+      margin-top: 8px;
+
+      @media (min-width: @desktop-width) {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+.page-footer__developer-text {
+  .font(14px; 400; 18px);
+  color: @dark-light-blue;
+  margin-right: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .font(18px;400;18px);
+    margin-top: 35px;
+    margin-right: 13px;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer__wrapper {
+  .page-footer .container {
     display: flex;
     flex-direction: row;
-  }
-
-  .social__list {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-footer__wrapper {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .social__list {
-    display: flex;
-    flex-direction: row;
+    justify-content: space-between;
   }
 }

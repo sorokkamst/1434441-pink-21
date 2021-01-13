@@ -1,51 +1,112 @@
 .download {
+  padding-top: 28px;
+  margin-top: 315px;
+  min-height: 242px;
+  padding-right: 20px;
+  padding-left: 20px;
   background-color: @dark-blue;
+  position: relative;
+  width: 280px;
+  right: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    width: 100%;
+    right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
 
 .download__list {
   display: flex;
   list-style: none;
-  margin: 0;
   padding: 0;
-  margin-bottom: 31px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: start;
+    margin-left: 40px;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 45px;
+  }
 }
 
 .download__item--appstore {
-  .size(47px;56px);
-  background-image: url("../../img/apple-logo.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  margin-left: 4px;
+  margin-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 6px;
+    margin-bottom: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 7px;
+    margin-bottom: 5px;
+  }
 }
 
 .download__item--googleplay {
-  .size(47px;56px);
-  background-image: url("../../img/android-logo.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  .size(43px; 47px);
+  margin-left: 2px;
 }
 
 .download__item--microsoft-store {
-  .size(47px;56px);
-  background-image: url("../../img/microsoft-logo.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  .size(44px; 41px);
+  margin-top: 4px;
+  margin-right: 2px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0px;
+    margin-left: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 6px;
+  }
 }
 
 .download__item:not(:last-child) {
-  margin-right: 35px;
+  margin-right: 32px;
 }
 
 .download__button {
+  display: block;
+  .font(18px; 700; 18px);
+  padding: 16px 35px;
+  box-sizing: border-box;
+  border-radius: 29px;
+  border: 3px solid @white;
+  color: @white;
   text-decoration: none;
-  margin-bottom: 38px;
+  margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    display: inline-block;
+    padding: 16px 46px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .font(21px; 700; 18px);
+    padding: 17px 29px;
+    margin-bottom: 66px;
+  }
 }
 
 .download__description {
-  .font(14px;300;24px);
-  width: 280px;
-  min-height: 34px;
+  .font(14px; 300; 24px);
   color: @white;
   margin: 0;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -53,36 +114,8 @@
     background-color: transparent;
   }
 
-  .download__list {
-    margin-bottom: 42px;
-  }
-
-  .download__button {
-    margin-bottom: 51px;
-  }
-
   .download__description {
-    .font(18px;300;24px);
-    width: 300px;
-    min-height: 37px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .download {
-    background-color: transparent;
-  }
-
-  .download__list {
-    margin-bottom: 59px;
-  }
-
-  .download__button {
-    margin-bottom: 75px;
-  }
-
-  .download__description {
-    .font(18px;300;24px);
+    .font(18px; 300; 24px);
     width: 300px;
     min-height: 37px;
   }
