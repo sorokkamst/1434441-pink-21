@@ -9,9 +9,10 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header container-np">
+  <header class="page-header page-header__inner">
+    <div class="page-header__container container">
     <div class="page-header__logo">
-      <a href="index.html">
+      <a href="#">
         <img src="img/pink-logo.svg" width="74" height="23" alt="Логотип Pink">
       </a>
     </div>
@@ -25,21 +26,22 @@
         <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
       </ul>
     </nav>
+    <h1 class="page-header__headline">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    </div>
+      <div class="page-header__inner-wrapper">
+        <div class="container">
+      <p class="page-header__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на<br class="desktop-inner">
+        вашу бонусную карту!</p>
+      <p class="page-header__description page-main__description-add">Пожалуйста, заполните форму ниже:</p>
+    </div>
+    </div>
   </header>
 
-  <main class="page-main">
-    <div class="page-main__inner-wrapper">
-      <div class="container">
-        <h1 class="page-main__headline">Конкурс на самое безбашенное путешествие с Пинк</h1>
-        <p class="page-main__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
-          вашу бонусную карту!</p>
-        <p class="page-main__description page-main__description-add">Пожалуйста, заполните форму ниже:</p>
-      </div>
-    </div>
+  <main class="page-main page-main__inner">
     <section class="page-main__form">
       <h2 class="visually-hidden">Форма участника конкурса</h2>
-      <form class="page-main__form-data form container" method="POST" action="https://echo.htmlacademy.ru">
-        <div class="form__fieldset-wrapper">
+      <form class="page-main__form-data container" method="POST" action="https://echo.htmlacademy.ru">
+        <div class="form__fieldset-wrapper form__fieldset-wrapper-data">
           <fieldset class="form__fieldset form__fieldset--personal-data">
             <ul class="form__list">
               <li class="form__item">
@@ -60,7 +62,7 @@
             </ul>
           </fieldset>
         </div>
-        <div class="form__fieldset-wrapper">
+        <div class="form__fieldset-wrapper form__fieldset-wrapper-advantages">
           <fieldset class="form__fieldset form__fieldset--advantages">
             <legend class="form__legend">Ваши безбашенные<br class="mobile">достижения в путешествии</legend>
             <ul class="form__list">
@@ -68,38 +70,38 @@
                 <input class="form__item-input-adv" type="checkbox" name="selfie" id="selfie" checked>
                 <label for="selfie" class="form__item-label">Сделал селфи с акулой</label>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--advantages">
                 <input class="form__item-input-adv" type="checkbox" name="burn" id="burn" checked>
                 <label for="burn" class="form__item-label">Обгорел на пляже</label>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--advantages">
                 <input class="form__item-input-adv" type="checkbox" name="norris" id="norris">
                 <label for="norris" class="form__item-label">Видел Чака Норриса</label>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--advantages">
                 <input class="form__item-input-adv" type="checkbox" name="souvenir" id="souvenir">
                 <label for="souvenir" class="form__item-label">Накупил сувениров</label>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--advantages">
                 <input class="form__item-input-adv" type="checkbox" name="tower" id="tower" checked>
                 <label for="tower" class="form__item-label">Удержал башню</label>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--advantages">
                 <input class="form__item-input-adv" type="checkbox" name="hotel" id="hotel">
                 <label for="hotel" class="form__item-label">Разгромил отель</label>
               </li>
             </ul>
           </fieldset>
         </div>
-        <div class="form__fieldset-wrapper">
+        <div class="form__fieldset-wrapper form__fieldset-wrapper-comments">
           <fieldset class="form__fieldset form__fieldset--comments">
             <legend class="form__legend">Контактная информация</legend>
             <ul class="form__list">
-              <li class="form__item">
+              <li class="form__item form__item--phone">
                 <input class="form__item-input" type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
                 <label for="tel" class="form__item-label">Номер телефона</label>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--email">
                 <input class="form__item-input" type="email" name="email" id="email" placeholder="Введите почту *"
                   required>
                 <label for="email" class="form__item-label">Адрес почты</label>
@@ -107,7 +109,7 @@
             </ul>
           </fieldset>
         </div>
-        <div class="form__fieldset-wrapper">
+        <div class="form__fieldset-wrapper form__fieldset-wrapper-system">
           <fieldset class="form__fieldset form__fieldset--system">
             <legend class="form__legend">С каким приложением путешествовали?</legend>
             <ul class="form__list">
@@ -126,7 +128,7 @@
             </ul>
           </fieldset>
         </div>
-        <div class="form__fieldset-wrapper">
+        <div class="form__fieldset-wrapper form__fieldset-wrapper-comment">
           <fieldset class="form__fieldset form__fieldset--comment">
             <legend class="form__legend">Опишите свои эмоции</legend>
             <textarea class="form__textarea" placeholder="Можно прям в красках, не стесняясь в выражениях" id="comment"
@@ -135,12 +137,12 @@
         </div>
         <div class="form__sent">
           <button type="submit" class="form__submit-button">Отправить форму</button>
-          <p class="form__addition">&lowast; — обязательные поля</p>
+          <p class="form__addition">&lowast; — обязательные   <small class="desktop-only">для заполнения</small> поля</p>
         </div>
       </form>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer page-footer__inner">
     <div class="container">
       <div class="page-footer__logo">
         <img src="img/logotype-blue-tablet.svg" width="145" height="40" alt="Логотип Pink">
