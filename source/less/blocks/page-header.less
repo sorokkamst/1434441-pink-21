@@ -30,11 +30,13 @@
     background-image: url("../img/back-mobile-inner.jpg");
     position: relative;
     background-position: bottom;
+    background-color: @dark-light-blue;
 
     @media (min-width: @tablet-width) {
       background-image: url("../img/back-tablet-inner.jpg");
       background-position: 50% 0;
       background-repeat: no-repeat;
+      background-color: @dark-light-blue;
     }
 
     @media (min-width: @desktop-width) {
@@ -116,6 +118,10 @@
   margin-top: 93px;
   margin-bottom: 44px;
 
+  & .desktop-catalog {
+    display: none;
+  }
+
   &-catalog {
     margin-bottom: 77px;
   }
@@ -126,7 +132,11 @@
     margin-bottom: 60px;
 
     &-catalog {
-      margin-bottom: 129px;
+      margin-bottom: 130px;
+
+      & .desktop-catalog {
+        display: none;
+      }
     }
   }
 
@@ -134,6 +144,12 @@
     .font(50px; 300; 68px);
     margin-top: 130px;
     margin-bottom: 88px;
+
+    &-catalog {
+      & .desktop-catalog {
+        display: block;
+      }
+    }
   }
 }
 
@@ -145,12 +161,12 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 91px;
-    padding-bottom: 57px;
+    padding-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 91px;
-    padding-bottom: 71px;
+    padding-top: 93px;
+    padding-bottom: 68px;
     text-align: center;
   }
 }
@@ -188,6 +204,10 @@
     & .desktop-inner {
       display: block;
     }
+
+    & .catalog-tablet {
+      display: none;
+    }
   }
 }
 
@@ -203,22 +223,34 @@
   }
 }
 
-  @media (min-width: @tablet-width) {
-    .page-header__inner-wrapper-catalog .page-header__description {
-      display: inline;
-      padding: 0;
-    }
-
-    .page-header__inner-wrapper-catalog .container {
-      padding-left: 20px;
-      text-align: center;
-    }
+@media (min-width: @tablet-width) {
+  .page-header__inner-wrapper-catalog .page-header__description {
+    display: inline;
+    padding: 0;
   }
 
-  .page-header .main-nav {
-    position: absolute;
+  .page-header__inner-wrapper-catalog .container {
+    padding-left: 20px;
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__inner-wrapper-catalog .page-header__description {
+    display: block;
+    padding: 0;
   }
 
-  .page-header .main-nav--nojs {
-    position: relative;
+  .page-header__inner-wrapper-catalog .container {
+    padding-left: 10px;
+    text-align: center;
   }
+}
+
+.page-header .main-nav {
+  position: absolute;
+}
+
+.page-header .main-nav--nojs {
+  position: relative;
+}
