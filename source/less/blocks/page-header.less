@@ -27,12 +27,12 @@
   }
 
   &__inner {
-    background-image: url("../../img/back-mobile-inner.jpg");
+    background-image: url("../img/back-mobile-inner.jpg");
     position: relative;
     background-position: bottom;
 
     @media (min-width: @tablet-width) {
-      background-image: url("../../img/back-tablet-inner.jpg");
+      background-image: url("../img/back-tablet-inner.jpg");
       background-position: 50% 0;
       background-repeat: no-repeat;
     }
@@ -110,20 +110,28 @@
 }
 
 .page-header__headline {
-  .font(24px;300;33px);
+  .font(24px; 300; 33px);
   color: @white;
   text-align: center;
   margin-top: 93px;
   margin-bottom: 44px;
 
+  &-catalog {
+    margin-bottom: 77px;
+  }
+
   @media (min-width: @tablet-width) {
-    .font(50px;300;68px);
+    .font(50px; 300; 68px);
     margin-top: 175px;
     margin-bottom: 60px;
+
+    &-catalog {
+      margin-bottom: 129px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    .font(50px;300;68px);
+    .font(50px; 300; 68px);
     margin-top: 130px;
     margin-bottom: 88px;
   }
@@ -148,7 +156,7 @@
 }
 
 .page-header__description {
-  .font(14px;400;30px);
+  .font(14px; 400; 30px);
   color: @dark-light-blue;
   text-align: center;
   z-index: -200;
@@ -158,15 +166,23 @@
     display: none;
   }
 
+  & .catalog-tablet {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
-    .font(18px;400;30px);
+    .font(18px; 400; 30px);
     padding: 0 30px 0 30px;
+
+    & .catalog-tablet {
+      display: block;
+    }
   }
 
   @media (min-width: @desktop-width) {
     display: inline;
     text-align: center;
-    .font(18px;400;30px);
+    .font(18px; 400; 30px);
     padding: 0;
 
     & .desktop-inner {
@@ -187,10 +203,22 @@
   }
 }
 
-.page-header .main-nav {
-  position: absolute;
-}
+  @media (min-width: @tablet-width) {
+    .page-header__inner-wrapper-catalog .page-header__description {
+      display: inline;
+      padding: 0;
+    }
 
-.page-header .main-nav--nojs {
-  position: relative;
-}
+    .page-header__inner-wrapper-catalog .container {
+      padding-left: 20px;
+      text-align: center;
+    }
+  }
+
+  .page-header .main-nav {
+    position: absolute;
+  }
+
+  .page-header .main-nav--nojs {
+    position: relative;
+  }

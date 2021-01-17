@@ -26,17 +26,17 @@
         <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
       </ul>
     </nav>
-    <h1 class="page-header__headline">Фотографии пользователей</h1>
+    <h1 class="page-header__headline page-header__headline-catalog">Фотографии пользователей</h1>
     </div>
-      <div class="page-header__inner-wrapper">
+      <div class="page-header__inner-wrapper page-header__inner-wrapper-catalog">
         <div class="container">
-      <p class="page-header__description">Взгляните на фотографии, которые выкладывают пользователи!</p>
+      <p class="page-header__description">Взгляните на фотографии, которые выкладывают<br class="catalog-tablet"> пользователи!</p>
       <p class="page-header__description page-main__description-add">Видите, как не хватает ваших?</p>
     </div>
     </div>
   </header>
 
-  <main class="page-main">
+  <main class="page-main page-main__container">
 
       <div class="page-main__photo-container">
       <a class="page-main__photo-main">
@@ -50,8 +50,7 @@
           <b class="page-main__author-name">Анна</b>
           <time datetime="2020-11-24T00:16" class="page-main__photo-time">(5 минут назад)</time>
         </p>
-        <p class="page-main__photo-text">Прыгать или нет? Напишите в комментарии свой совет и<br> смотрите прямую трансляцию в
-          перископе, задавайте свои вопросы!</p>
+        <p class="page-main__photo-text">Прыгать или нет? Напишите в комментарии свой совет и<br class="catalog-mobile"> смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
         <div class="page-main__photo-like">
           <button class="page-main__photo-like-button" type="button" aria-label="Поставить лайк"></button>
           <span class="page-main__photo-like-counter">Нравится: 215</span>
@@ -62,7 +61,7 @@
     <section class="page-main__photo photo container">
       <h2 class="visually-hidden">Лента фотографий</h2>
         <figure class="photo__item">
-          <a class="photo__item-scale">
+          <a class="photo__item-scale photo__item-scale-first">
             <img src="img/photo-1-mobile.jpg" width="280px" height="180px" alt="Фото машины">
           </a>
           <figcaption class="photo__info">
@@ -70,7 +69,7 @@
               <b class="photo__author-name">Левон</b>
               <time datetime="2020-11-24T19:16" class="photo__time">(5 часов назад)</time>
             </p>
-            <p class="photo__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <p class="photo__text">Вчера он на луну летал, сегодня в<br class="tablet"> руки к нам попал.</p>
             <div class="photo__like">
               <button class="photo__like-button" type="button" aria-label="Поставить лайк"></button>
               <span class="photo__like-counter">Нравится: 356</span>
@@ -78,7 +77,7 @@
           </figcaption>
         </figure>
         <figure class="photo__item">
-          <a class="photo__item-scale">
+          <a class="photo__item-scale photo__item-scale-second">
             <img src="img/photo-2-mobile.jpg" width="280px" height="180px" alt="Барабаны">
           </a>
           <figcaption class="photo__info">
@@ -94,7 +93,7 @@
           </figcaption>
         </figure>
         <figure class="photo__item">
-          <a class="photo__item-scale">
+          <a class="photo__item-scale photo__item-scale-third">
             <img src="img/photo-3-mobile.jpg" width="280px" height="180px" alt="Предложение о рекламе">
           </a>
           <figcaption class="photo__info">
@@ -110,7 +109,7 @@
           </figcaption>
         </figure>
         <figure class="photo__item">
-          <a class="photo__item-scale">
+          <a class="photo__item-scale photo__item-scale-forth">
             <img src="img/photo-4-mobile.jpg" width="280px" height="180px" alt="Кубанская бахча">
           </a>
           <figcaption class="photo__info">
@@ -126,7 +125,7 @@
           </figcaption>
         </figure>
         <figure class="photo__item">
-          <a class="photo__item-scale">
+          <a class="photo__item-scale photo__item-scale-fifth">
             <img src="img/photo-5-mobile.jpg" width="280px" height="180px" alt="Фото в горах">
           </a>
           <figcaption class="photo__info">
@@ -142,7 +141,7 @@
           </figcaption>
         </figure>
         <figure class="photo__item">
-          <a class="photo__item-scale">
+          <a class="photo__item-scale photo__item-scale-six">
             <img src="img/photo-6-mobile.jpg" width="280px" height="180px" alt="Фото в самолете">
           </a>
           <figcaption class="photo__info">
@@ -163,7 +162,7 @@
       <h2 class="visually-hidden">Обработка и загрузка фотографий</h2>
       <div class="upload__wrapper">
         <form action="https://echo.htmlacademy.ru/" method="POST" class="upload__form">
-          <p class="upload__appeal">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+          <p class="upload__appeal">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
           <div class="upload__picture">
             <input type="file" class="visually-hidden" name="upload-pic" id="upload-pic"
               aria-label="Загрузить свою фотографию">
@@ -178,11 +177,11 @@
             <div class="upload__filter-scale"></div>
             <div class="upload__filter-toggle"></div>
           </div>
-          <div class="upload__filter">
+          <div class="upload__filter upload__filter-tablet">
             <div class="upload__filter-scale"></div>
             <div class="upload__filter-toggle"></div>
           </div>
-          <div class="upload__filter">
+          <div class="upload__filter upload__filter-tablet">
             <div class="upload__filter-scale"></div>
             <div class="upload__filter-toggle"></div>
           </div>

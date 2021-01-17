@@ -1,22 +1,119 @@
+.upload .container {
+  background-color: @grey-light;
+}
+
+.upload__buttons-sent {
+  margin-top: 51px;
+}
+
 .upload__appeal {
+  position: relative;
   .font(14px;400;30px);
   color: @dark-light-blue;
+  text-align: center;
+  margin: 0;
+  background-color: @white;
+  width: 320px;
+  right: 20px;
+  padding: 23px 0 42px 0;
+
+  @media (min-width: @tablet-width) {
+    .font(18px;400;30px);
+    width: 660px;
+    padding: 65px 0 70px 0;
+  }
 }
 
 .upload__accept {
-  .font(18px;700;18px);
+  .font(18px; 700; 18px);
   .size(280px; 55px);
   color: @pink;
   border: 3px solid @pink;
   border-radius: 30px;
   background-color: transparent;
+  margin-bottom: 12px;
 }
 
 .upload__reset {
-  .font(18px;700;18px);
+  .font(18px; 700; 18px);
   .size(280px; 55px);
   color: @dark-light-blue-opacity;
   border: 3px solid @dark-light-blue-opacity;
   border-radius: 30px;
   background-color: transparent;
+  margin-bottom: 43px;
+}
+
+.upload__picture {
+  .size(280px; 374px);
+  background-image: url("../img/photo-7-mobile.jpg");
+  margin-top: 20px;
+  margin-bottom: 43px;
+
+  @media (min-width: @tablet-width) {
+    .size(300px; 400px);
+    background-image: url("../img/photo-7-tablet.jpg");
+    background-repeat: no-repeat;
+    margin-top: 56px;
+  }
+}
+
+.upload__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: 22px;
+}
+
+.upload__buttons-size {
+  .size(44px; 44px);
+  border: 0;
+  background-image: url("../img/crop.svg");
+  background-color: transparent;
+}
+
+.upload__buttons-color {
+  .size(48px; 43px);
+  border: 0;
+  background-image: url("../img/fill.svg");
+  background-color: transparent;
+}
+
+.upload__buttons-contrast {
+  .size(32px; 32px);
+  border: 0;
+  background-image: url("../img/contrast.svg");
+  background-color: transparent;
+}
+
+.upload__buttons .upload__button {
+  margin-right: 35px;
+}
+
+.upload__filter {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.upload__filter-scale {
+  width: 240px;
+  height: 2px;
+  background-color: @dark-light-blue;
+}
+
+.upload__filter-toggle {
+  position: absolute;
+  .size(10px; 10px);
+  border: 2px solid @pink;
+  border-radius: 50%;
+  right: 52px;
+  top: -6px;
+  background-color: @white;
+}
+
+.upload__filter-tablet {
+  display: none;
 }
