@@ -2,8 +2,8 @@
   overflow: hidden;
 
   @media (min-width: @tablet-width) {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,7 +42,7 @@
   border-spacing: 0;
   transition: left 0.4s linear;
   padding-top: 134px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
 
   @media (min-width: @tablet-width) {
     position: static;
@@ -54,7 +54,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 5px;
   }
 }
@@ -92,17 +92,6 @@
     }
   }
 
-  &:first-child {
-    display: none;
-    border-right: 0;
-    border-bottom: 2px solid @grey-light;
-    background-color: transparent;
-
-    @media (min-width: @tablet-width) {
-      display: table-cell;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     padding-top: 10px;
     padding-bottom: 8px;
@@ -123,7 +112,7 @@
       .font(14px; 400; 30px);
       position: absolute;
       .size(27px; 10px);
-      left: 0px;
+      left: 0;
       top: 12px;
     }
   }
@@ -259,17 +248,27 @@
 }
 
 .price__toggle {
-  .size(0px; 0px);
+  .size(0; 0);
   margin: 0;
   background-color: fade(@dark-light-blue, 30%);
   padding: 3px 3px;
   border: 0;
   border-radius: 50%;
+
+  &:hover {
+    background-color: fade(@dark-light-blue, 60%);
+  }
+
+  &:active {
+    background-color: fade(@dark-light-blue, 10%);
+  }
 }
 
 .price__toggle--active {
+  padding: 3px 3px;
   background-color: @white;
   border: 3px solid @dark-light-blue;
+  border-radius: 50%;
   margin-right: 15px;
   margin-left: 15px;
 }

@@ -16,7 +16,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 35px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -59,8 +59,19 @@
   border: 3px solid fade(@dark-light-blue, 10%);
   margin-right: 6px;
 
+  &:hover {
+    border: 3px solid @dark-light-blue;
+  }
+
+  &:active {
+    opacity: 10%;
+
+    & path {
+      fill: fade(@pink, 30%);
+    }
+  }
+
   @media (min-width: @tablet-width) {
-    margin-right: 7px;
     margin-right: 9px;
   }
 }
@@ -75,7 +86,7 @@
     margin-top: 35px;
 
     & svg {
-      margin-top: 8px;
+      margin-top: 4px;
 
       @media (min-width: @desktop-width) {
         margin-top: 40px;
@@ -84,13 +95,21 @@
   }
 }
 
+.page-footer__developer-link:hover path {
+  fill: @dark-light-blue;
+}
+
+.page-footer__developer-link:active path {
+  fill: fade(@dark-light-blue, 30%);
+}
+
 .page-footer__developer-text {
   .font(14px; 400; 18px);
   color: @dark-light-blue;
   margin-right: 16px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 8px;
+    margin-top: 0;
   }
 
   @media (min-width: @desktop-width) {
