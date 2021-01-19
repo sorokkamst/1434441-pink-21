@@ -59,6 +59,18 @@
   border: 3px solid fade(@dark-light-blue, 10%);
   margin-right: 6px;
 
+  &:hover {
+    border: 3px solid @dark-light-blue;
+  }
+
+  &:active {
+    opacity: 10%;
+
+    & path {
+      fill: fade(@pink, 30%);
+    }
+  }
+
   @media (min-width: @tablet-width) {
     margin-right: 9px;
   }
@@ -81,6 +93,14 @@
       }
     }
   }
+}
+
+.page-footer__developer-link:hover path {
+  fill: @dark-light-blue;
+}
+
+.page-footer__developer-link:active path {
+  fill: fade(@dark-light-blue, 30%);
 }
 
 .page-footer__developer-text {

@@ -88,6 +88,16 @@
   text-decoration: none;
   margin-bottom: 31px;
 
+  &:hover {
+    background-color: @white;
+    color: @pink;
+  }
+
+  &:active {
+    background-color: @white;
+    color: fade(@pink; 30%);
+  }
+
   @media (min-width: @tablet-width) {
     background-color: transparent;
     display: inline-block;

@@ -19,10 +19,6 @@
   padding: 0;
 }
 
-.form__item-input {
-  padding: 0;
-}
-
 .form__item-input::placeholder {
   color: @dark-light-blue;
 }
@@ -74,7 +70,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 29px;
+    padding-top: 27px;
     width: 100%;
     padding-bottom: 29px;
   }
@@ -87,12 +83,11 @@
   order: 2;
   padding: 14px 0 14px 20px;
   margin-bottom: 18px;
+  border: 2px solid @grey;
 
   @media (min-width: @tablet-width) {
     width: 68%;
     align-self: center;
-    border: 0;
-    // border: 2px solid @grey;
     border-right: 60px solid @grey;
     margin-bottom: 10px;
   }
@@ -113,7 +108,7 @@
   display: none;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 36px;
+    margin-bottom: 37px;
     padding: 0 31px 0 31px;
     display: block;
   }
@@ -191,7 +186,9 @@
 @media (min-width: @desktop-width) {
   .form__fieldset--system {
     width: 92%;
-    margin-left: 35px;
+    margin-left: 72px;
+    margin-top: 2px;
+    min-width: 430px;
   }
 }
 
@@ -397,7 +394,7 @@
   }
 }
 
-.form__fieldset--advantages .form__item-input-adv:checked::before {
+.form__item-input-adv:checked + .form__item-label::after {
   content: "";
   position: absolute;
   width: 22px;
@@ -405,17 +402,17 @@
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
   left: 9px;
-  top: 6px;
+  top: 3px;
   z-index: 2;
 
   @media (min-width: @tablet-width) {
     left: 67px;
-    top: 7px;
+    top: 3px;
   }
 
   @media (min-width: @desktop-width) {
     left: -49px;
-    top: 7px;
+    top: 4px;
   }
 }
 
@@ -584,6 +581,12 @@
       margin-bottom: 53px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    &:not(:last-child) {
+      margin-bottom: 54px;
+    }
+  }
 }
 
 .form__fieldset--personal-data .form__item-input {
@@ -593,6 +596,7 @@
   order: 2;
   padding: 15px 0 15px 20px;
   margin-bottom: 16px;
+  border: 2px solid @grey;
 
   @media (min-width: @tablet-width) {
     padding: 12px 0 16px 18px;
@@ -600,15 +604,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 35px;
+    padding: 12px 0 16px 18px;
+    margin-right: 0;
   }
-}
-
-.form__item input[type="checkbox"],
-.form__item input[type="radio"] {
-  width: 0;
-  height: 0;
-  margin: -2px;
 }
 
 .form__fieldset--system .form__item-label::before {
@@ -627,7 +625,7 @@
   }
 }
 
-.form__fieldset--system .form__item-input:checked::before {
+.form__item-input:checked + .form__item-label::after {
   content: "";
   position: absolute;
   width: 15px;
@@ -635,12 +633,12 @@
   background-image: url("../img/ellipse-small.svg");
   background-repeat: no-repeat;
   left: 13px;
-  top: 8px;
+  top: 5px;
   z-index: 2;
 
   @media (min-width: @desktop-width) {
     left: 27px;
-    top: 7px;
+    top: 5px;
   }
 }
 
