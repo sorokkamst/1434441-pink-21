@@ -21,14 +21,14 @@
     background-size: 2560px 853px;
     background-position: 50% 0;
     background-repeat: no-repeat;
+    background-color: @dark-light-blue;
 
     &::before {
       position: absolute;
       content: "";
-      width: 2560px;
+      width: 100%;
       height: 110px;
       background-color: fade(@black, 30%);
-      right: 148px;
     }
   }
 
@@ -78,7 +78,7 @@
     background-image: url("../img/first-screen-phone.png");
     background-repeat: no-repeat;
     background-position: 16px 52px;
-    padding-bottom: 124px;
+    padding-bottom: 125px;
   }
 }
 
@@ -94,17 +94,32 @@
   left: 20px;
   z-index: 3;
 
-  & a {
+  & .page-header__logo-svg--mobile {
     display: block;
+  }
+
+  & .page-header__logo-svg--tablet {
+    display: none;
+  }
+
+  & .page-header__logo-svg--desktop {
+    display: none;
   }
 
   @media (min-width: @tablet-width) {
     top: 27px;
     left: 21px;
     .size(145px; 40px);
-    background-image: url("../img/logotype-white-tablet.svg");
 
-    & a {
+    & .page-header__logo-svg--mobile {
+      display: none;
+    }
+
+    & .page-header__logo-svg--tablet {
+      display: block;
+    }
+
+    & .page-header__logo-svg--desktop {
       display: none;
     }
   }
@@ -113,19 +128,18 @@
     position: relative;
     left: 0;
     .size(147px; 40px);
-    background-image: url("../img/logotype-white-desktop.svg");
-  }
-}
 
-.page-header__logo-svg:hover {
-  & path {
-    fill: @pink;
-  }
-}
+    & .page-header__logo-svg--mobile {
+      display: none;
+    }
 
-.page-header__logo-svg:active {
-  & path {
-    fill: fade(@white, 30%);
+    & .page-header__logo-svg--tablet {
+      display: none;
+    }
+
+    & .page-header__logo-svg--desktop {
+      display: block;
+    }
   }
 }
 
@@ -150,7 +164,7 @@
     margin-bottom: 60px;
 
     &-catalog {
-      margin-bottom: 130px;
+      margin-bottom: 127px;
 
       & .desktop-catalog {
         display: none;
@@ -161,7 +175,7 @@
   @media (min-width: @desktop-width) {
     .font(50px; 300; 68px);
     margin-top: 14px;
-    margin-bottom: 88px;
+    margin-bottom: 89px;
 
     &-catalog {
       & .desktop-catalog {
@@ -183,7 +197,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 93px;
+    padding-top: 91px;
     padding-bottom: 69px;
     text-align: center;
   }
@@ -231,6 +245,10 @@
 
 .page-header__description-add {
   display: none;
+
+  &-catalog {
+    display: block;
+  }
 
   @media (min-width: @tablet-width) {
     display: block;

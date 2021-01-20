@@ -14,6 +14,10 @@
   margin-top: 39px;
   text-align: center;
 
+  & .page-footer__logo-svg--desktop {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
     margin-top: 35px;
     margin-left: 0;
@@ -22,6 +26,14 @@
   @media (min-width: @desktop-width) {
     margin-top: 70px;
     margin-left: 2px;
+
+    & .page-footer__logo-svg--mobile-tablet {
+      display: none;
+    }
+
+    & .page-footer__logo-svg--desktop {
+      display: block;
+    }
   }
 }
 

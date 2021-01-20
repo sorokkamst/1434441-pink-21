@@ -4,6 +4,10 @@
   @media (min-width: @tablet-width) {
     padding-bottom: 11px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 14px;
+  }
 }
 
 .upload .container {
@@ -11,14 +15,14 @@
 }
 
 .upload__buttons-sent {
-  margin-top: 51px;
+  margin-top: 53px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
     display: flex;
     flex-direction: column;
     right: 13px;
-    bottom: 13px;
+    bottom: 11px;
   }
 
   @media (min-width: @desktop-width) {
@@ -39,18 +43,20 @@
   background-color: @white;
   width: 320px;
   right: 20px;
-  padding: 23px 0 42px 0;
+  padding: 19px 0 42px 0;
 
   @media (min-width: @tablet-width) {
     .font(18px; 400; 30px);
     width: 660px;
-    padding: 65px 0 70px 0;
+    padding: 42px 0 70px 0;
   }
 
   @media (min-width: @desktop-width) {
     .font(18px; 400; 30px);
-    width: 980px;
-    padding: 57px 0 67px 0;
+    width: 960px;
+    padding: 36px 0 66px 0;
+    margin: 0 auto;
+    right: 10px;
   }
 }
 
@@ -97,12 +103,13 @@
 .upload__picture img {
   .size(280px; 374px);
   margin-top: 20px;
-  margin-bottom: 43px;
+  margin-bottom: 39px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     .size(300px; 400px);
     background-repeat: no-repeat;
-    margin-top: 56px;
+    margin-top: 57px;
   }
 
   @media (min-width: @desktop-width) {
@@ -116,20 +123,20 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
-  margin-left: 22px;
+  margin-left: 10px;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
     position: absolute;
     right: 201px;
-    top: 250px;
+    top: 228px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
     position: absolute;
     right: 395px;
-    top: 238px;
+    top: 217px;
   }
 }
 
@@ -219,7 +226,7 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 270px;
+    top: 248px;
     right: 18px;
 
     &::after {
@@ -235,7 +242,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: 260px;
+    top: 239px;
     right: 90px;
 
     &::after {
