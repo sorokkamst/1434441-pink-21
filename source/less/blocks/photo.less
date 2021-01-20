@@ -5,16 +5,15 @@
 }
 
 @media (min-width: @tablet-width) {
-  .photo__item {
-    margin-bottom: 0;
+  .page-main__photo-item {
+    margin-bottom: 50px;
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @desktop-width) {
   .page-main__photo-item {
-    margin-bottom: 50px;
+    margin-bottom: 51px;
     overflow: hidden;
-    // magin: 0;
   }
 }
 
@@ -42,7 +41,11 @@
 
 .page-main__photo-main {
   display: block;
+  width: 320px;
   height: 137px;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -57,7 +60,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      top: 53px;
+      top: 54px;
       right: 130px;
       text-align: center;
     }
@@ -78,7 +81,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      top: 59px;
+      top: 60px;
       right: 150px;
     }
   }
@@ -96,12 +99,14 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    margin: 0 0;
   }
 }
 
 .photo__item-scale {
   display: block;
   height: 180px;
+  cursor: pointer;
 }
 
 @media (min-width: @tablet-width) {
@@ -164,12 +169,22 @@
   position: relative;
 }
 
-@media (min-width: @desktop-width) {
-  .page-main__photo-info {
-    background-color: @grey-light;
-    position: relative;
+.photo__info {
+  min-height: 120px;
+}
+
+.page-main__photo-info {
+  background-color: @grey-light;
+  position: relative;
+  margin: 0 auto;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
     width: 940px;
-    margin: 0 auto;
   }
 }
 
@@ -222,9 +237,9 @@
     padding-top: 23px;
   }
 
-  @media (min-width: @tablet-width) {
-    padding-left: 28px;
-    padding-top: 23px;
+  @media (min-width: @desktop-width) {
+    padding-left: 27px;
+    padding-top: 24px;
   }
 }
 
@@ -245,8 +260,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 28px;
-    min-height: 48px;
+    padding-left: 27px;
+    min-height: 46px;
   }
 }
 
@@ -303,7 +318,6 @@
     display: grid;
     grid-template-columns: 300px 300px;
     column-gap: 20px;
-    row-gap: 20px;
   }
 
   .upload__form {
@@ -316,6 +330,6 @@
     display: grid;
     grid-template-columns: 300px 300px 300px;
     column-gap: 20px;
-    row-gap: 54px;
+    row-gap: 32px;
   }
 }
