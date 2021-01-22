@@ -79,6 +79,16 @@
     margin-right: 44px;
     margin-bottom: 0;
   }
+
+  &:hover {
+    color: @white;
+    background-color: @pink;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @pink;
+  }
 }
 
 .upload__reset {
@@ -97,6 +107,17 @@
   @media (min-width: @desktop-width) {
     .size(183px; 55px);
     margin-bottom: 0;
+  }
+
+  &:hover {
+    color: fade(@dark-light-blue, 30%);
+    border: 3px solid fade(@dark-light-blue, 30%);
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: fade(@dark-light-blue, 30%);
+    border: 0;
   }
 }
 
@@ -156,6 +177,18 @@
       .size(44px; 44px);
     }
   }
+
+  &:hover g {
+    opacity: 60%;
+  }
+
+  &:active path {
+    fill: @pink;
+  }
+
+  &:active g {
+    opacity: 1;
+  }
 }
 
 .upload__buttons-color {
@@ -184,6 +217,18 @@
       margin-top: 29px;
     }
   }
+
+  &:hover g {
+    opacity: 60%;
+  }
+
+  &:active path {
+    fill: @pink;
+  }
+
+  &:active g {
+    opacity: 1;
+  }
 }
 
 .upload__buttons-contrast {
@@ -211,6 +256,18 @@
       .size(32px; 32px);
       margin-top: 62px;
     }
+  }
+
+  &:hover g {
+    opacity: 60%;
+  }
+
+  &:active path {
+    fill: @pink;
+  }
+
+  &:active g {
+    opacity: 1;
   }
 }
 
@@ -284,6 +341,10 @@
   @media (min-width: @desktop-width) {
     right: 205px;
     top: -6px;
+  }
+
+  &:active {
+    background-color: @pink;
   }
 }
 

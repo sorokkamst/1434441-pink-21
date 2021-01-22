@@ -171,11 +171,21 @@
     border: 0;
     background-image: url("../img/left-arrow.svg");
     top: 90px;
+    opacity: 30%;
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 10%;
   }
 }
 
 .reviews__next {
   display: none;
+  opacity: 30%;
 
   @media (min-width: @desktop-width) {
     display: block;
@@ -186,5 +196,13 @@
     background-image: url("../img/right-arrow.svg");
     top: 90px;
     right: 9px;
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 10%;
   }
 }
