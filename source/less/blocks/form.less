@@ -555,7 +555,7 @@
   border: 2px solid @pink;
 }
 
-.form__item-input-adv:checked+.form__item-label::after {
+.form__item-input-adv:checked + .form__item-label::after {
   content: "";
   position: absolute;
   width: 22px;
@@ -821,7 +821,7 @@
   border: 2px solid @pink;
 }
 
-.form__item-input:checked+.form__item-label::after {
+.form__item-input:checked + .form__item-label::after {
   content: "";
   position: absolute;
   width: 15px;
@@ -971,7 +971,7 @@
   left: 0;
   bottom: 180px;
   margin: auto;
-  box-shadow: 0px 7px 15px @dark-light-blue-modal;
+  box-shadow: 0 7px 15px @dark-light-blue-modal;
   border-radius: 1px;
 
   @media (min-width: @tablet-width) {
@@ -1047,7 +1047,7 @@
   left: 0;
   bottom: 180px;
   margin: auto;
-  box-shadow: 0px 7px 15px @dark-light-blue-modal;
+  box-shadow: 0 7px 15px @dark-light-blue-modal;
   border-radius: 1px;
 
   @media (min-width: @tablet-width) {
@@ -1119,8 +1119,8 @@
 }
 
 
-  @media (min-width: @desktop-width) {
-    .modal-error .modal-error__wrapper {
+@media (min-width: @desktop-width) {
+  .modal-error .modal-error__wrapper {
     width: 780px;
     height: 163px;
     background-color: @grey-light;
