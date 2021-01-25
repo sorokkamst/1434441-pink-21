@@ -1,3 +1,7 @@
+.form__legend {
+  padding: 0;
+}
+
 .page-main__form-data {
   display: flex;
   flex-direction: column;
@@ -60,19 +64,62 @@
 }
 
 .form__fieldset-wrapper-comments {
+  position: relative;
   padding-top: 32px;
   padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 39px;
+    padding-top: 46px;
     padding-bottom: 27px;
     order: 3;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 27px;
+    margin-top: 8px;
+    padding-top: 25px;
     width: 100%;
-    padding-bottom: 29px;
+    padding-bottom: 30px;
+  }
+}
+
+.form__fieldset--comments .form__legend {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    .font(14px; 400; 18px);
+    color: @pink;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: 39px;
+    left: 211px;
+    background-color: @white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 10px;
+      background-color: @white;
+      top: 3px;
+      left: -30px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 10px;
+      background-color: @white;
+      top: 3px;
+      right: -30px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 20px;
+    left: 371px;
   }
 }
 
@@ -84,37 +131,26 @@
   padding: 14px 0 14px 20px;
   margin-bottom: 18px;
   border: 2px solid @grey;
+  outline: none;
 
   @media (min-width: @tablet-width) {
-    width: 68%;
+    padding: 13px 0 15px 20px;
+    width: 77%;
     align-self: center;
-    border-right: 60px solid @grey;
     margin-bottom: 10px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 270px;
+    width: 327px;
     padding: 14px 23px 14px 20px;
   }
-}
 
-.form__fieldset--comments .form__legend {
-  .font(14px; 400; 18px);
-  padding: 0;
-  color: @pink;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 43px;
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 37px;
-    padding: 0 31px 0 31px;
-    display: block;
+  &:hover {
+    border: 2px solid @dark-light-blue;
   }
 
-  @media (min-width: @desktop-width) {
-    margin-bottom: 33px;
+  &:active {
+    border: 2px solid @pink;
   }
 }
 
@@ -138,8 +174,12 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .form__fieldset--comments .form__list {
+.form__fieldset--comments .form__list {
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
     display: flex;
     margin-left: 58px;
   }
@@ -155,36 +195,46 @@
   .form__fieldset--comments .form__item--phone::after {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 19px;
+    width: 58px;
+    height: 58px;
     background-image: url("../img/phone-icon.svg");
+    background-position: center;
+    background-color: @grey;
     background-repeat: no-repeat;
-    right: 79px;
-    top: 21px;
+    right: 61px;
+    top: 2px;
 
     @media (min-width: @desktop-width) {
-      right: 20px;
+      right: 2px;
+      top: 2px;
     }
   }
 
   .form__fieldset--comments .form__item--email::after {
     content: "";
     position: absolute;
-    width: 18px;
-    height: 13px;
+    width: 58px;
+    height: 58px;
     background-image: url("../img/mail-icon.svg");
+    background-position: center;
+    background-color: @grey;
     background-repeat: no-repeat;
-    right: 80px;
-    top: 24px;
+    right: 61px;
+    top: 2px;
 
     @media (min-width: @desktop-width) {
-      right: 22px;
+      right: 2px;
+      top: 2px;
     }
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (min-width: @tablet-width) {
   .form__fieldset--system {
+    padding-top: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
     width: 92%;
     margin-left: 72px;
     margin-top: 2px;
@@ -192,49 +242,24 @@
   }
 }
 
-.form__fieldset--system .form__legend {
-  .font(14px; 400; 18px);
-  padding: 0;
-  color: @pink;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 43px;
-}
-
-.form__fieldset--comment .form__legend {
-  display: block;
-  .font(14px; 400; 18px);
-  padding: 0;
-  color: @pink;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 43px;
-}
-
 // System fieldset
 
 .form__fieldset-wrapper-system {
-  padding-top: 40px;
+  padding-top: 115px;
   padding-bottom: 1px;
   background-color: @grey-light;
-
-  & .form__legend {
-    margin-bottom: 38px;
-  }
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    padding-top: 28px;
+    padding-top: 34px;
     padding-bottom: 20px;
     background-color: transparent;
     order: 2;
-
-    & .form__legend {
-      padding: 0 25px 0 26px;
-      margin-bottom: 48px;
-    }
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 73px;
+    margin-top: 10px;
     width: 50%;
     padding-top: 2px;
   }
@@ -272,14 +297,156 @@
 
 // Advantages
 
-@media (min-width: @tablet-width) {
-  .form__fieldset--advantages {
+.form__fieldset--advantages {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
     border: 2px solid @grey;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .form__fieldset--advantages .form__list {
+.form__fieldset--advantages .form__legend-text {
+  display: block;
+  .font(14px; 400; 18px);
+  color: @pink;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  top: -78px;
+  left: 32px;
+
+  @media (min-width: @tablet-width) {
+    top: -9px;
+    left: 122px;
+    background-color: @white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 10px;
+      background-color: @white;
+      top: 3px;
+      left: -30px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 10px;
+      background-color: @white;
+      top: 3px;
+      right: -30px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 282px;
+    top: -10px;
+  }
+}
+
+.form__fieldset--system .form__legend-text {
+  display: block;
+  .font(14px; 400; 18px);
+  color: @pink;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  top: 40px;
+
+  @media (min-width: @tablet-width) {
+    left: 151px;
+    top: 27px;
+    background-color: @white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 10px;
+      background-color: @white;
+      top: 3px;
+      left: -25px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 10px;
+      background-color: @white;
+      top: 3px;
+      right: -25px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 58px;
+    top: -7px;
+  }
+}
+
+.form__fieldset--comment .form__legend-text {
+  display: block;
+  .font(14px; 400; 18px);
+  color: @pink;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  top: 38px;
+  left: 48px;
+
+  @media (min-width: @tablet-width) {
+    top: 5px;
+    left: 218px;
+    background-color: @white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 10px;
+      background-color: @white;
+      top: 3px;
+      left: -35px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 10px;
+      background-color: @white;
+      top: 3px;
+      right: -35px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 6px;
+    left: 378px;
+
+    &::before {
+      width: 39px;
+      left: -39px;
+    }
+
+    &::after {
+      width: 39px;
+      right: -39px;
+    }
+  }
+}
+
+
+.form__fieldset--advantages .form__list {
+  @media (min-width: @tablet-width) {
+    padding-top: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 8px;
@@ -322,12 +489,13 @@
 }
 
 .form__fieldset-wrapper-advantages {
-  padding-top: 39px;
+  position: relative;
+  padding-top: 118px;
   padding-bottom: 30px;
   background-color: @grey-light;
 
   @media (min-width: @tablet-width) {
-    padding-top: 29px;
+    padding-top: 36px;
     padding-bottom: 45px;
     order: 4;
     background-color: transparent;
@@ -339,21 +507,6 @@
 
   @media (min-width: @desktop-width) {
     width: 100%;
-  }
-}
-
-.form__fieldset--advantages .form__legend {
-  .font(14px; 400; 18px);
-  padding: 0;
-  color: @pink;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 43px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 48px;
-    padding-left: 33px;
-    padding-right: 33px;
   }
 }
 
@@ -402,7 +555,7 @@
   border: 2px solid @pink;
 }
 
-.form__item-input-adv:checked + .form__item-label::after {
+.form__item-input-adv:checked+.form__item-label::after {
   content: "";
   position: absolute;
   width: 22px;
@@ -448,31 +601,20 @@
 // Comment
 
 .form__fieldset-wrapper-comment {
-  padding-top: 38px;
+  padding-top: 72px;
   padding-bottom: 48px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding-top: 13px;
     padding-bottom: 66px;
     order: 5;
+    margin-top: 10px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
-  }
-}
-
-.form__fieldset-wrapper-comment .form__legend {
-  margin-bottom: 16px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 37px;
-    padding-left: 37px;
-    padding-right: 37px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 32px;
+    margin-top: 7px;
   }
 }
 
@@ -506,10 +648,12 @@
   padding-top: 14px;
   padding-left: 21px;
   min-height: 185px;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     padding-top: 14px;
     padding-left: 20px;
+    margin-top: 45px;
     margin-left: 58px;
     margin-bottom: 51px;
     width: 476px;
@@ -520,7 +664,16 @@
   @media (min-width: @desktop-width) {
     width: 795px;
     min-height: 110px;
-    margin-bottom: 44px;
+    margin-top: 42px;
+    margin-bottom: 42px;
+  }
+
+  &:hover {
+    border: 2px solid @dark-light-blue;
+  }
+
+  &:active {
+    border: 2px solid @pink;
   }
 }
 
@@ -668,7 +821,7 @@
   border: 2px solid @pink;
 }
 
-.form__item-input:checked + .form__item-label::after {
+.form__item-input:checked+.form__item-label::after {
   content: "";
   position: absolute;
   width: 15px;

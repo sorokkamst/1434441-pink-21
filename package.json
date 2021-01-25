@@ -10,8 +10,10 @@
     "gulp-less": "4.0.1",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "3.0.0",
     "postcss": "8.1.7",
+    "postcss-csso": "^5.0.0",
     "stylelint": "13.7.2",
     "stylelint-config-htmlacademy": "0.1.4"
   },
