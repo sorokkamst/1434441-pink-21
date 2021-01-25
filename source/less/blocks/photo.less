@@ -8,6 +8,10 @@
   .page-main__photo-item {
     margin-bottom: 50px;
   }
+
+  .photo__item {
+    margin-bottom: 20px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -15,13 +19,17 @@
     margin-bottom: 51px;
     overflow: hidden;
   }
+
+  .photo__item {
+    margin-bottom: 21px;
+  }
 }
 
 .photo__like,
 .page-main__photo-like {
   position: relative;
-  padding: 11px 0 17px 32px;
-  margin-bottom: 20px;
+  padding: 11px 0 17px 49px;
+  margin-bottom: 19px;
 }
 
 @media (min-width: @tablet-width) {
@@ -191,38 +199,42 @@
 .page-main__photo-like-button,
 .photo__like-button {
   border: 0;
+  padding: 0;
+  .size(13px;12px);
+  background-image: url("../img/heart.svg");
+  position: absolute;
+  left: 17px;
+  bottom: 24px;
+}
 
-  &::before {
-    content: "";
+@media (min-width: @tablet-width) {
+  .page-main__photo-like-button {
+    left: 154px;
+    bottom: 23px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__photo-like-button {
     position: absolute;
-    width: 13px;
-    height: 12px;
-    background-image: url("../img/heart.svg");
-    left: 17px;
-    top: 15px;
+    left: 153px;
+    bottom: 24px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .photo__like-button {
     position: absolute;
-    right: 48px;
-    bottom: 55px;
+    left: 257px;
+    bottom: 29px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .photo__like-button {
     position: absolute;
-    right: 49px;
-    bottom: 55px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .page-main__photo-like-button::before {
-    left: 154px;
-    top: 16px;
+    left: 256px;
+    bottom: 30px;
   }
 }
 

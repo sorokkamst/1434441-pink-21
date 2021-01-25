@@ -48,7 +48,7 @@
   @media (min-width: @tablet-width) {
     .font(18px; 400; 30px);
     width: 660px;
-    padding: 42px 0 70px 0;
+    padding: 44px 0 70px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -79,6 +79,16 @@
     margin-right: 44px;
     margin-bottom: 0;
   }
+
+  &:hover {
+    color: @white;
+    background-color: @pink;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @pink;
+  }
 }
 
 .upload__reset {
@@ -97,6 +107,17 @@
   @media (min-width: @desktop-width) {
     .size(183px; 55px);
     margin-bottom: 0;
+  }
+
+  &:hover {
+    color: fade(@dark-light-blue, 30%);
+    border: 3px solid fade(@dark-light-blue, 30%);
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: fade(@dark-light-blue, 30%);
+    border: 0;
   }
 }
 
@@ -123,20 +144,24 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
-  margin-left: 10px;
+  margin-left: 23px;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
+    justify-content: space-between;
+    vertical-align: middle;
+    .size(24px; 165px);
     position: absolute;
-    right: 201px;
-    top: 228px;
+    right: 248px;
+    top: 240px;
+    margin-bottom: 0;
+    margin-left: 0;
   }
 
   @media (min-width: @desktop-width) {
-    flex-direction: column;
-    position: absolute;
-    right: 395px;
-    top: 217px;
+    .size(48px; 187px);
+    right: 423px;
+    top: 218px;
   }
 }
 
@@ -147,7 +172,7 @@
 
   @media (min-width: @tablet-width) {
     & svg {
-      .size(22px; 22px);
+      .size(24px; 22px);
     }
   }
 
@@ -155,6 +180,18 @@
     & svg {
       .size(44px; 44px);
     }
+  }
+
+  &:hover g {
+    opacity: 60%;
+  }
+
+  &:active path {
+    fill: @pink;
+  }
+
+  &:active g {
+    opacity: 1;
   }
 }
 
@@ -164,9 +201,11 @@
   background-color: transparent;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    top: 2px;
+
     & svg {
       .size(24px; 22px);
-      margin-top: 39px;
     }
 
     & path {
@@ -179,22 +218,26 @@
   }
 
   @media (min-width: @desktop-width) {
+    top: 2px;
+
     & svg {
       .size(48px; 43px);
-      margin-top: 29px;
+    }
+
+    &:active path {
+      fill: @pink;
+    }
+
+    &:active g {
+      opacity: 1;
     }
   }
 }
 
-.upload__buttons-contrast {
-  .size(32px; 32px);
-  border: 0;
-  background-color: transparent;
-
-  @media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
+  .upload__buttons-contrast {
     & svg {
       .size(16px; 16px);
-      margin-top: 68px;
     }
 
     & path {
@@ -205,17 +248,47 @@
       opacity: 1;
     }
   }
+}
 
-  @media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
+  .upload__buttons-contrast {
     & svg {
       .size(32px; 32px);
-      margin-top: 62px;
     }
+    background-color: transparent;
+  }
+
+  &:active path {
+    fill: @pink;
+  }
+
+  &:active g {
+    opacity: 1;
   }
 }
 
 .upload__buttons .upload__button {
-  margin-right: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .size(48px; 44px);
+  margin-right: 30px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    .size(24px; 22px);
+    margin-right: 0;
+    border: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .size(48px; 44px);
+  }
+}
+
+.upload__button svg {
+  justify-content: center;
+  align-items: center;
 }
 
 .upload__filter {
@@ -284,6 +357,10 @@
   @media (min-width: @desktop-width) {
     right: 205px;
     top: -6px;
+  }
+
+  &:active {
+    background-color: @pink;
   }
 }
 

@@ -4,19 +4,24 @@ const sourcemap = require("gulp-sourcemaps");
 const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const csso = require("postcss-csso");
+const rename = require("gulp-rename");
 const sync = require("browser-sync").create();
+
 
 // Styles
 
-const styles = () => {
+function styles() {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
     .pipe(sourcemap.write("."))
+    .pipe(rename("style.min.css"))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 }
@@ -25,7 +30,7 @@ exports.styles = styles;
 
 // Server
 
-const server = (done) => {
+function server(done) {
   sync.init({
     server: {
       baseDir: 'source'
