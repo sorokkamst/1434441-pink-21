@@ -13,33 +13,27 @@
     background-image: url("../img/features-background.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 245px;
+    background-position: 0 270px;
   }
 }
 
-@media (min-width: @mobile-width) {
-  .features .container {
-    position: relative;
-    background-image: url("../img/features-background.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 100px;
-    padding-bottom: 285px;
-  }
-}
+.features .features__container {
+  position: relative;
+  background-image: url("../img/features-background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 100px;
+  padding-bottom: 285px;
 
-@media (min-width: @tablet-width) {
-  .features .container {
+  @media (min-width: @tablet-width) {
     background-image: url("../img/features-background.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 189px;
     padding-bottom: 9px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .features .container {
+  @media (min-width: @desktop-width) {
     background-image: none;
   }
 }

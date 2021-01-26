@@ -1,7 +1,10 @@
 .upload__form {
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
+    display: block;
     padding-bottom: 11px;
   }
 
@@ -10,7 +13,7 @@
   }
 }
 
-.upload .container {
+.upload .upload__wrapper {
   background-color: @grey-light;
 }
 
@@ -234,8 +237,11 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .upload__buttons-contrast {
+.upload__buttons-contrast {
+  border: 0;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
     & svg {
       .size(16px; 16px);
     }
@@ -248,22 +254,21 @@
       opacity: 1;
     }
   }
-}
 
-@media (min-width: @desktop-width) {
-  .upload__buttons-contrast {
+  @media (min-width: @desktop-width) {
     & svg {
       .size(32px; 32px);
     }
+
+    &:active path {
+      fill: @pink;
+    }
+
+    &:active g {
+      opacity: 1;
+    }
+
     background-color: transparent;
-  }
-
-  &:active path {
-    fill: @pink;
-  }
-
-  &:active g {
-    opacity: 1;
   }
 }
 
@@ -299,7 +304,7 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 248px;
+    top: 249px;
     right: 18px;
 
     &::after {
