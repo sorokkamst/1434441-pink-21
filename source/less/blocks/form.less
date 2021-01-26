@@ -969,7 +969,7 @@
   }
 }
 
-.modal--error .modal--error__label {
+.modal--error .modal__error-label {
   .font(18px; 700; 24px);
   color: @black;
   margin-bottom: 11px;
@@ -984,7 +984,7 @@
   }
 }
 
-.modal--error .modal--error__message {
+.modal--error .modal__error-message {
   display: block;
   justify-content: center;
   .font(14px; 400; 24px);
@@ -997,7 +997,7 @@
   }
 }
 
-.modal--error .modal--error__button {
+.modal--error .modal__error-button {
   padding: 0;
   margin-top: 27px;
   .font(18px; 700; 30px);
@@ -1045,7 +1045,7 @@
   }
 }
 
-.modal--success .modal--success__label {
+.modal--success .modal__success-label {
   .font(18px; 700; 24px);
   color: @black;
   margin-bottom: 11px;
@@ -1065,7 +1065,7 @@
   }
 }
 
-.modal--success .modal--success__message {
+.modal--success .modal__success-message {
   display: block;
   justify-content: center;
   .font(14px; 400; 24px);
@@ -1083,7 +1083,7 @@
   }
 }
 
-.modal--success .modal--success__wrapper {
+.modal--success .modal__success-wrapper {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -1104,7 +1104,7 @@
 
 
 @media (min-width: @desktop-width) {
-  .modal--error .modal--error__wrapper {
+  .modal--error .modal__error-wrapper {
     width: 780px;
     height: 163px;
     background-color: @grey-light;
@@ -1115,7 +1115,7 @@
 }
 
 
-.modal--success .modal--success__button {
+.modal--success .modal__success-button {
   padding: 0;
   margin-top: 50px;
   .font(18px; 700; 30px);
@@ -1143,8 +1143,8 @@
   display: none;
 }
 
-.modal--error__message,
-.modal--success__message {
+.modal__error-message,
+.modal__success-message {
   .tablet {
     display: none;
   }
@@ -1182,7 +1182,7 @@
   }
 }
 
-.modal--error__label .tablet {
+.modal__error-label .tablet {
   display: none;
 
   @media (min-width: @tablet-width) {
