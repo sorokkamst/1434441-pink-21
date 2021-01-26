@@ -86,6 +86,10 @@
   background-color: @grey-light;
   position: relative;
   min-height: 120px;
+
+  @media (min-width: @desktop-width) {
+    min-height: 156px;
+  }
 }
 
 .photo__like-button {
@@ -96,21 +100,17 @@
   position: absolute;
   left: 17px;
   bottom: 24px;
-}
 
-@media (min-width: @tablet-width) {
-  .photo__like-button {
+  @media (min-width: @tablet-width) {
     position: absolute;
     left: 257px;
     bottom: 29px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .photo__like-button {
+  @media (min-width: @desktop-width) {
     position: absolute;
     left: 256px;
-    bottom: 30px;
+    bottom: -30px;
   }
 }
 
@@ -180,7 +180,7 @@
 @media (min-width: @desktop-width) {
   .photo__like-counter {
     position: absolute;
-    bottom: 23px;
+    bottom: -38px;
     left: 28px;
   }
 }
