@@ -17,9 +17,7 @@ const sync = require("browser-sync").create();
 
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({
-      collapseWhitespace: true
-    }))
+    .pipe(htmlmin())
     .pipe(gulp.dest("build"))
 }
 
@@ -124,7 +122,7 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
