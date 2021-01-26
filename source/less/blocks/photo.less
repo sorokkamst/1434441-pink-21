@@ -1,113 +1,24 @@
-.photo__item,
-.page-main__photo-item {
+.photo__item {
   margin: 0;
   margin-bottom: 21px;
-}
 
-@media (min-width: @tablet-width) {
-  .page-main__photo-item {
-    margin-bottom: 50px;
-  }
-
-  .photo__item {
+  @media (min-width: @tablet-width) {
     margin-bottom: 20px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .page-main__photo-item {
-    margin-bottom: 51px;
-    overflow: hidden;
-  }
-
-  .photo__item {
+  @media (min-width: @desktop-width) {
     margin-bottom: 21px;
   }
 }
 
-.photo__like,
-.page-main__photo-like {
+.photo__like {
   position: relative;
   padding: 11px 0 17px 49px;
   margin-bottom: 19px;
-}
-
-@media (min-width: @tablet-width) {
-  .photo__like {
-    margin-bottom: 0;
-    padding: 0;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .page-main__photo-like {
-    position: absolute;
-    right: 59px;
-    top: 14px;
-  }
-}
-
-.page-main__photo-main {
-  display: block;
-  width: 320px;
-  height: 137px;
-  position: relative;
-  margin: 0 auto;
-  cursor: pointer;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 140px;
-    height: 36px;
-    background-color: @pink;
-    right: 20px;
-
-    @media (min-width: @tablet-width) {
-      top: 57px;
-    }
-
-    @media (min-width: @desktop-width) {
-      top: 54px;
-      right: 130px;
-      text-align: center;
-    }
-  }
-
-  &::after {
-    content: "Панорама дня";
-    text-transform: uppercase;
-    .font(12px; 700; 24px);
-    color: @white;
-    position: absolute;
-    background-color: @pink;
-    right: 40px;
-    top: 6px;
-
-    @media (min-width: @tablet-width) {
-      top: 63px;
-    }
-
-    @media (min-width: @desktop-width) {
-      top: 60px;
-      right: 150px;
-    }
-  }
 
   @media (min-width: @tablet-width) {
-    width: 660px;
-    height: 509px;
-  }
-
-  @media (min-width: @desktop-width) {
-    position: relative;
-    width: 1200px;
-    height: 506px;
-    right: 0;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0 0;
+    margin-bottom: 0;
+    padding: 0;
   }
 }
 
@@ -171,32 +82,12 @@
   }
 }
 
-.photo__info,
-.page-main__photo-info {
+.photo__info {
   background-color: @grey-light;
   position: relative;
-}
-
-.photo__info {
   min-height: 120px;
 }
 
-.page-main__photo-info {
-  background-color: @grey-light;
-  position: relative;
-  margin: 0 auto;
-  width: 280px;
-
-  @media (min-width: @tablet-width) {
-    width: 620px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 940px;
-  }
-}
-
-.page-main__photo-like-button,
 .photo__like-button {
   border: 0;
   padding: 0;
@@ -205,21 +96,6 @@
   position: absolute;
   left: 17px;
   bottom: 24px;
-}
-
-@media (min-width: @tablet-width) {
-  .page-main__photo-like-button {
-    left: 154px;
-    bottom: 23px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-main__photo-like-button {
-    position: absolute;
-    left: 153px;
-    bottom: 24px;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -238,8 +114,7 @@
   }
 }
 
-.photo__author,
-.page-main__photo-author {
+.photo__author {
   margin: 0;
   padding-left: 17px;
   padding-top: 18px;
@@ -255,8 +130,7 @@
   }
 }
 
-.photo__text,
-.page-main__photo-text {
+.photo__text {
   .font(14px; 400; 24px);
   color: @dark-light-blue;
   margin: 0;
@@ -283,26 +157,23 @@
   }
 }
 
-.photo__author-name,
-.page-main__author-name {
+.photo__author-name {
   .font(14px; 700; 24px);
   color: @dark-light-blue;
 }
 
-.photo__time,
-.page-main__photo-time {
+
+.photo__time {
   .font(12px; 300; 24px);
   color: @dark-light-blue;
   text-transform: uppercase;
 }
 
-.photo__like-counter,
-.page-main__photo-like-counter {
+.photo__like-counter {
   .font(12px; 400; 24px);
   color: @pink;
   text-transform: uppercase;
 }
-
 
 @media (min-width: @tablet-width) {
   .photo__like-counter {
@@ -320,20 +191,11 @@
   }
 }
 
-.upload__form {
-  display: flex;
-  flex-direction: column;
-}
-
 @media (min-width: @tablet-width) {
   .photo {
     display: grid;
     grid-template-columns: 300px 300px;
     column-gap: 20px;
-  }
-
-  .upload__form {
-    display: block;
   }
 }
 
