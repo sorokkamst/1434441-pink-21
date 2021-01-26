@@ -7,7 +7,6 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
-const uglify = require("gulp-uglify-es");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
@@ -23,18 +22,6 @@ const html = () => {
     }))
     .pipe(gulp.dest("build"))
 }
-
-// Scripts
-
-const scripts = () => {
-  return gulp.src("source/js/navigation.js")
-    .pipe(uglify())
-    .pipe(rename("navigation.min.js"))
-    .pipe(gulp.dest("build/js"))
-    .pipe(sync.stream());
-}
-
-exports.scripts = scripts;
 
 // Styles
 
@@ -74,7 +61,7 @@ const images = () => {
 
 exports.images = images;
 
-//Webp
+// Webp
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
@@ -102,7 +89,8 @@ exports.sprite = sprite;
 const copy = () => {
   return gulp.src([
       "source/fonts/*.{woff2,woff}",
-      "source/img/**/*.{jpg,png,svg}"
+      "source/img/**/*.{jpg,png,svg}",
+      "source/js/*.js"
     ], {
       base: "source"
     })
@@ -156,16 +144,5 @@ const build = gulp.series(
 exports.build = build;
 
 exports.default = gulp.series(
-  clean,
-  gulp.parallel(
-    styles,
-    html,
-    copy,
-    sprite,
-    images,
-    createWebp
-    ),
-  gulp.series(
-    server, watcher
+    build, server, watcher
   )
-)
