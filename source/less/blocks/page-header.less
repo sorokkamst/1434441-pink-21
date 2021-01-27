@@ -7,11 +7,21 @@
   background-repeat: no-repeat;
   background-color: transparent;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile2x.jpg");
+    background-size: 320px 733px;
+  }
+
   @media (min-width: @tablet-width) {
     position: relative;
     background-image: url("../img/back-tablet.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet2x.jpg");
+      background-size: 660px 729px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -20,6 +30,11 @@
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-color: @dark-light-blue;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop2x.jpg");
+      background-size: 2560px 853px;
+    }
 
     &::before {
       position: absolute;
@@ -36,10 +51,20 @@
     background-position: bottom;
     background-color: transparent;
 
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/back-mobile-inner2x.jpg");
+        background-size: 320px 370px;
+      }
+
     @media (min-width: @tablet-width) {
       background-image: url("../img/back-tablet-inner.jpg");
       background-position: 50% 0;
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/back-tablet-inner2x.jpg");
+        background-size: 660px 677px;
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -47,6 +72,12 @@
       background-size: 2560px 853px;
       background-position: 50% 0;
       background-repeat: no-repeat;
+      background-color: @dark-light-blue;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/back-desktop2x.jpg");
+          background-size: 2560px 853px;
+        }
     }
   }
 }
@@ -58,6 +89,11 @@
     background-position: -20px 110px;
     padding-bottom: 1px;
     z-index: 1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/first-screen-phone-mobile2x.png");
+      background-size: 320px 289px;
+    }
   }
 }
 
@@ -68,6 +104,11 @@
     background-position: -20px 74px;
     padding-bottom: 110px;
     z-index: 1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/first-screen-phone-tablet2x.png");
+      background-size: 660px 545px;
+    }
   }
 }
 
@@ -77,6 +118,11 @@
     background-repeat: no-repeat;
     background-position: 16px 52px;
     padding-bottom: 125px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/first-screen-phone2x.png");
+      background-size: 1050px 645px;
+    }
   }
 }
 
