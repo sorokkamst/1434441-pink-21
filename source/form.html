@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -153,7 +155,7 @@
     <div class="page-header__inner-wrapper">
       <div class="container">
         <p class="page-header__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль
-          на<br class="desktop-inner">
+          на<br class="page-header__desktop-inner">
           вашу бонусную карту!</p>
         <p class="page-header__description page-header__description-add">Пожалуйста, заполните форму ниже:</p>
       </div>
@@ -187,7 +189,7 @@
         </div>
         <div class="form__fieldset-wrapper form__fieldset-wrapper-advantages">
           <fieldset class="form__fieldset form__fieldset--advantages">
-            <legend class="form__legend"><span class="form__legend-text">Ваши безбашенные<br class="mobile"> достижения в путешествии</span></legend>
+            <legend class="form__legend"><span class="form__legend-text">Ваши безбашенные<br class="form__mobile"> достижения в путешествии</span></legend>
             <ul class="form__list">
               <li class="form__item form__item--advantages">
                 <input class="form__item-input-adv visually-hidden" type="checkbox" name="selfie" id="selfie" checked>
@@ -260,14 +262,14 @@
         </div>
         <div class="form__sent">
           <button type="submit" class="form__submit-button">Отправить форму</button>
-          <p class="form__addition">&lowast; — обязательные <small class="desktop-only">для заполнения</small> поля</p>
+          <p class="form__addition">&lowast; — обязательные <small class="form__desktop-only">для заполнения</small> поля</p>
         </div>
       </form>
     </section>
   </main>
   <footer class="page-footer page-footer__inner">
     <div class="container">
-      <div class="page-footer__logo">
+      <a href="index.html" class="page-footer__logo">
         <svg class="page-footer__logo-svg page-footer__logo-svg--mobile" width="145" height="40" viewBox="0 0 145 40"
           xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="#logo-mobile-footer"></use>
@@ -280,7 +282,7 @@
           xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="#logo-desktop-footer"></use>
         </svg>
-      </div>
+      </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
@@ -326,9 +328,9 @@
 <section class="modal modal--error">
     <h2 class="visually-hidden">Модальное окно с сообщением об ошибке</h2>
     <p class="modal__error-label">
-      Что-то пошло<br class="tablet"> не так!
+      Что-то пошло<br class="modal__tablet"> не так!
     </p>
-    <p class="modal__error-message">Проверьте поля, выделенные<br class="tablet"> красным,<br class="desktop"> скорее всего вы забыли<br class="tablet"> их заполнить</p>
+    <p class="modal__error-message">Проверьте поля, выделенные<br class="modal__tablet"> красным,<br class="modal__desktop"> скорее всего вы забыли<br class="modal__tablet"> их заполнить</p>
     <div class="modal__error-wrapper">
     <button class="modal__error-button" type="button">
     Ок
@@ -340,7 +342,7 @@
     <p class="modal__success-label">
       Ваша заявка отправлена
     </p>
-    <p class="modal__success-message">Спасибо за ваше участие, ваша<br class="tablet"> заявка<br class="mobile"> уже<br class="desktop"> поступила к нам. В<br class="tablet"> ближайшее<br class="mobile"> время мы<br class="desktop"> рассмотрим<br class="tablet"> ее и<br class="mobile"> оповестим вас.</p>
+    <p class="modal__success-message">Спасибо за ваше участие, ваша<br class="modal__tablet"> заявка<br class="modal__mobile"> уже<br class="modal__desktop"> поступила к нам. В<br class="modal__tablet"> ближайшее<br class="modal__mobile"> время мы<br class="modal__desktop"> рассмотрим<br class="modal__tablet"> ее и<br class="modal__mobile"> оповестим вас.</p>
     <div class="modal__success-wrapper">
     <button class="modal__success-button" type="button">
     Закрыть окно

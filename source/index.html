@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -216,14 +218,14 @@
           </li>
           <li class="features__item features__item--world">
             <h3 class="features__title">Меняет мир вокруг</h3>
-            <p class="features__description">Сделайте снимок и<br class="desktop"> украсьте его смайликом<br
-                class="desktop"> или текстовой подписью, чтобы<br class="tablet">
+            <p class="features__description">Сделайте снимок и<br class="features__desktop"> украсьте его смайликом<br
+                class="features__desktop"> или текстовой подписью, чтобы<br class="features__tablet">
               усилить эффект</p>
           </li>
           <li class="features__item features__item--friends">
             <h3 class="features__title">Заводит новых друзей</h3>
             <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями <br
-                class="desktop"> и заводите новых</p>
+                class="features__desktop"> и заводите новых</p>
           </li>
         </ul>
       </div>
@@ -233,9 +235,9 @@
       <div class="research__container container">
         <div class="research__wrapper">
           <h2 class="visually-hidden">Результат от пользования приложением</h2>
-          <h3 class="research__title">Эффект<br class="tablet"> на 24 часа!</h3>
-          <p class="research__text">Британские ученые провели исследования<br class="tablet"> и доказали,<br
-              class="desktop"> что положительный эффект<br class="tablet"> от
+          <h3 class="research__title">Эффект<br class="research__tablet"> на 24 часа!</h3>
+          <p class="research__text">Британские ученые провели исследования<br class="research__tablet"> и доказали,<br
+              class="research__desktop"> что положительный эффект<br class="research__tablet"> от
             использования приложения длится целые сутки!</p>
           <a href="#" class="research__link">Узнать больше об исследовании</a>
         </div>
@@ -251,8 +253,8 @@
               <cite class="reviews__author-name">Николай Петров</cite>
               <p class="reviews__author-information">25 лет, водитель трамвая</p>
               <p class="reviews__author-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на<br
-                  class="desktop">
-                привычные серые вещи! А еще я познакомился со своей будущей женой в<br class="desktop"> комментариях к
+                  class="reviews__desktop">
+                привычные серые вещи! А еще я познакомился со своей будущей женой в<br class="reviews__desktop"> комментариях к
                 выложенной
                 фотографии!»</p>
             </div>
@@ -368,7 +370,7 @@
   </main>
   <footer class="page-footer">
     <div class="container">
-      <div class="page-footer__logo">
+      <a class="page-footer__logo">
         <svg class="page-footer__logo-svg page-footer__logo-svg--mobile" width="145" height="40" viewBox="0 0 145 40"
           xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="#logo-mobile-footer"></use>
@@ -381,7 +383,7 @@
           xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="#logo-desktop-footer"></use>
         </svg>
-      </div>
+      </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
